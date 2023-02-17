@@ -1,0 +1,95 @@
+/* style.css */
+
+/* Set font to Helvetica */
+body {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+/* Use accessible color palette */
+:root {
+    --primary-color:#ec625f;
+    --secondary-color: #D3EEEE;
+    --background-color: #313131;
+    --text-color: #f2f2f2;
+    --border-color: #D3D5FD
+    ;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 32px;
+    color: var(--primary-color);
+}
+
+.chat-container {
+    height: 10em;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    background-color: #525252;
+   
+}
+
+.chat-messages {
+    max-height: 400px;
+    overflow-y: scroll;
+    margin-top: 4em;
+    margin-bottom: 1em;
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.chat-input {
+    width: 0;
+    opacity: 0;
+    font-size: 18px;
+    padding: 2px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    margin-right: 16px;
+    transition: opacity 0.5s, width 0.5s;
+}
+
+.chat-input.show {
+    width: 100%;
+    opacity: 1;
+}
+
+.send-button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 18px;
+    margin: 10px;
+    margin-bottom: 2em;
+    padding-bottom: 3em;
+
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-button:hover {
+    background-color: #0054A6;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .title {
+        font-size: 24
+    }
